@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+
+  <!-- The main container  -->
+  <div class="container" role="main">
+
+    <!-- the main scoreBoard -->
+      <div class="score-board">
+
+          <!-- logo section -->
+          <img src="images/logo.svg" alt="A logo">
+
+          <!-- score section -->
+          <div class="score">
+            <p>SCORE</p>
+            <h1 class="score">0</h1>
+          </div>
+      </div>
+
+      <!-- this is the gameboard section first displayed -->
+      <div class="game-board">
+           <!-- paper -->
+          <button class="btn-round btn-paper-border" data-choice="paper">
+            <div class="wrapper">
+              <img src="images/icon-paper.svg" alt="Paper">
+            </div>
+          </button>
+
+          <!-- scissors -->
+            <button class="btn-round btn-scissors-border" data-choice="scissors">
+              <div class="wrapper">
+                <img src="images/icon-scissors.svg" alt="Scissors">
+              </div>
+            </button>
+
+            <!-- rock -->
+            <button class="btn-round btn-rock-border" data-choice="rock">
+              <div class="wrapper">
+                <img src="images/icon-rock.svg" alt="Rock">
+              </div>
+            </button>
+
+      </div>
+
+      <!-- user and the computer choices section -->
+      <div class="user-game-choices">
+
+        <!-- the choice the user makes -->
+        <div class="user-chooses">
+          <p>YOU PICKED</p>
+          <button class="btn-round btn-paper-border btn-lg user-btn-disable" id="user-selected-choice">
+            <div class="wrapper wrapper-lg">
+              <img src="images/icon-paper.svg" alt="Paper">
+            </div>
+          </button>
+        </div>
+
+        <!-- The results section -->
+        <div class="result">
+          <h1 class="result-text">YOU LOSE</h1>
+          <button class="play-again">PLAY AGAIN</button>
+        </div>
+        
+        <!-- the choice the computer makes -->
+        <div class="game-chooses">
+          <p>THE HOUSE PICKED</p>
+          <button class="btn-round btn-scissors-border btn-lg computer-btn-disable" id="computer_selected_choice">
+            <div class="wrapper wrapper-lg">
+              <img src="images/icon-scissors.svg" alt="Scissors">
+            </div>
+          </button>
+        </div>
+        
+      </div>
+
+      <!-- Rules button  -->
+      <div class="open-rules">
+        <button class="rules-btn" id="open">RULES</button>
+      </div>
+
+      <!-- this is the rules section it comes out when the user hits the click button -->
+      <div class="rules" style="display: none;">
+        <!-- the image to be displayed when th rules btn is clicked -->
+          <img src="images/image-rules.svg" alt="Game rules">
+          <button class="close-btn" id="close">
+            <img src="images/icon-close.svg" alt="Rules Close">
+          </button>
+      </div>
+
+  </div>
+
+  <!-- javascript is here -->
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
